@@ -1,0 +1,45 @@
+#include <stdio.h>
+#include <stdlib.h>
+int main(void)
+{
+    int a;
+    scanf("%d", &a);
+    int arr[a];
+    char c = 'o';
+    for (int i = 0; i < a; i++)
+    {
+        scanf("%d", &arr[i]);
+    }
+    for (int i = 0; i < a; i++)
+    {
+        if (arr[i] == c)
+        {
+            continue;
+        }
+        else
+        {
+            for (int j = i; j < a - 1; j++)
+            {
+                if (arr[i] == arr[j + 1])
+                {
+                    arr[j + 1] = c;
+                }
+                else
+                {
+                    continue;
+                }
+            }
+        }
+    }
+    for (int z = 0; z < a; z++)
+    {
+        if (arr[z] == c)
+        {
+            continue;
+        }
+        else
+        {
+            printf("%d ", arr[z]);
+        }
+    }
+}
