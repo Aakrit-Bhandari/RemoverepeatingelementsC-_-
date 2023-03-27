@@ -31,6 +31,7 @@ int main(void)
             }
         }
     }
+    printf("\n");
     for (int z = 0; z < a; z++)
     {
         if (arr[z] == c)
